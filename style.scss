@@ -1,4 +1,9 @@
 @import 'var';
+@import 'mixins';
+
+
+@import 'index';
+@import 'blog';
 
 * {
     margin: 0;
@@ -39,17 +44,13 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-spbt;
     margin-top: 53px;
     margin-bottom: 53px;
 
     &__left {
         width: 14.8%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-spbt;
     }
 
     &__right {
@@ -60,7 +61,7 @@ body {
             align-items: center;
           
             &_text {
-                color: #292F36;
+                color: $colorTitle;
                 text-align: center;
                 font-size: 20px;
                 font-style: normal;
@@ -71,254 +72,71 @@ body {
 }
 
 .logo_name {
-    color: #292F36;
+    color: $colorTitle;
     font-family: DM Serif Display;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 96px;
-    &__banner {
-        height: 758px;
-        background-image: url(img/header_banner_img.png);
-        border-radius: 62px;
-        &_info {
-            width: 36%;
-            margin-left: 66px;
-            margin-top: 212px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        
-            &_title {
-                color: #292F36;
-                font-family: DM Serif Display;
-                font-size: 65px;
-                font-style: normal;
-                font-weight: 400;
-            }
+.news-item { 
+    height: 521px;
+    padding: 21px;
+    @include flex-col-start;
+    border-radius: 82px;
+    border: 1px solid #E7E7E7;
 
-            &_text {
-                color: #4D5053;               
-                font-size: 22px;
-                font-style: normal;
-                font-weight: 400;
-            }
-
-            &_button {
-                width: 50.7%;
-                height: 75px;
-                border: 1px transparent;
-                border-radius: 18px;
-                background: #292F36;     
-                color: #FFF;
-                text-align: center;          
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 600;
-                padding: 26px, 48px;
-                & svg {
-                    margin-left: 10px;
-                }
-            }
-        }
+    &__img {
+        height: 284px;
+        margin-bottom: 12px;
+        border-top-left-radius: 62px;
+        border-top-right-radius: 62px;
     }
-
-    &__layouts {
-      
-        &_title {
-            color: #292F36;
-            text-align: center;
-            font-family: DM Serif Display;
-            font-size: 50px;
-            font-style: normal;
-            font-weight: 400;
-        }
-    
-        &_text {
-            width: 61.4%;
-            margin-left: 19.3%;
-            margin-top: 8px;
-            margin-bottom: 93px;
-            color: #4D5053;
-            text-align: center;
-            font-family: Jost;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 400;
-        }
-        &_block {
-            display: grid;
-            grid-template-columns: repeat(2, 45.6%);
-            gap: 8.8%;
-            row-gap: 56px;
-            &_item {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-
-                &_title {
-                    margin-top: 24px;
-                    color: #292F36;
-                    font-family: DM Serif Display;
-                    font-size: 25px;
-                    font-style: normal;
-                    font-weight: 400;         
-                    letter-spacing: 0.5px;
-                }
-
-                &_text {
-                    color: #4D5053;
-                    font-family: Jost;
-                    font-size: 22px;
-                    font-style: normal;
-                    font-weight: 400;                  
-                    letter-spacing: 0.22px;
-                }
-            }
-        }
-    }
-}
-
-.project-info {
-    margin-top: 96px;
-    margin-bottom: 96px;
-    background-color: #F4F0EC;
-    padding-top: 151px;
-    padding-bottom: 151px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    &__content {
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-
-        &_item {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-
-            &_amount {
-                text-align: center;
-                color: #CDA274;
-                font-family: DM Serif Display;
-                font-size: 85px;
-                font-style: normal;
-                font-weight: 400;
-                letter-spacing: 1.7px;              
-            }
-
-            &_text {
-                color: #4D5053;
-                font-size: 22px;
-                font-style: normal;
-                font-weight: 400;
-                letter-spacing: 0.22px;   
-            }
-        }
-
-        &_item_line{  
-            border-right: 1px solid #CDA274;
-        }       
-    } 
-}
-
-.news {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     &__title {
-        margin-bottom: 12px;
-        color: #292F36;
-        text-align: center;
+        display: block;
+        white-space: pre-wrap;
+        width: 87%;
+        height: 93px;
+        margin-bottom: 30px;
+        color: $colorTitle;
         font-family: DM Serif Display;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 400; 
-        letter-spacing: 1px;
-    }
-
-    &__text {
-        margin-bottom: 52px;
-        width: 67.6%;
-        color: #4D5053;
-        text-align: center;
-        font-family: Jost;
-        font-size: 22px;
+        font-size: 25px;
         font-style: normal;
         font-weight: 400;
-        letter-spacing: 0.22px;
+        letter-spacing: 0.5px;
     }
 
-    &__block {
-        margin-bottom: 96px;
-        display: grid;
-        grid-template-columns: repeat(3, 31.8%);
-        gap: 2.3%;
-        &_item {
-            padding: 21px;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            border-radius: 82px;
-            border: 1px solid #E7E7E7;
+    &__date {
+        height: 52px;
+        margin-bottom: 18px;
+        @include flex-spbt;
 
+        &_left {
+            color: $colorText;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.16px;
+            text-transform: capitalize;
+        }
+
+        &_button {
+         border: 1px solid transparent;
+         background-color: $color_Back;
         
-            &_img {
-                height: 284px;
-                margin-bottom: 12px;
-                border-top-left-radius: 62px;
-                border-top-right-radius: 62px;
+            & svg:hover circle {
+                fill: $color_Back;
             }
-
-            &_title {
-                margin-bottom: 30px;
-                color: #292F36;
-                font-family: DM Serif Display;
-                font-size: 25px;
-                font-style: normal;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-            }
-
-            &_date {
-                height: 52px;
-                margin-bottom: 18px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                &_left {
-                    color: #4D5053;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    letter-spacing: 0.16px;
-                    text-transform: capitalize;
-                }
-
-                &_button {
-                 border: 1px solid transparent;
-                 background-color: $color_Back;
-                
-                    & svg:hover circle {
-                        fill: $color_Back;
-                    }
-                }
-                &_button:hover {
-                    background-color:  #E7E7E7;
-                }
+        
+            &:hover {
+                background-color:  #E7E7E7;
             }
         }
-        &_item:hover {
-            background:  #E7E7E7;
-        }
+    }
+
+    &:hover {
+        background:  #E7E7E7;
     }
 }
 
@@ -329,19 +147,16 @@ body {
     gap: 8.4%;
 
     &__social {
-        display: flex;
-        flex-direction: column;
+        @include flex-col-start;
         width: 32.8%;
 
         &_logo {
             width: 45%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             margin-bottom: 18px;
+            @include flex-spbt;
         }
         &_text {
-            color: #4D5053;
+            color: $colorText;
             font-size: 22px;
             font-style: normal;
             font-weight: 400;
@@ -350,7 +165,7 @@ body {
         }
         &_icon {
             display: flex;
-            justify-content: flex-start;
+            justify-content: start;
             gap: 54px;
         }
     }
@@ -360,7 +175,7 @@ body {
 
         &_title {
             margin-bottom: 8px;
-            color: #292F36;
+            color: $colorTitle;
             font-family: DM Serif Display;
             font-size: 25px;
             font-style: normal;
@@ -370,7 +185,7 @@ body {
       
         & li {
             margin: 22px 0 22px;
-            color: #4D5053;
+            color: $colorText;
             font-size: 22px;
             font-style: normal;
             font-weight: 400;
@@ -383,7 +198,7 @@ body {
       
         &_title {
             margin-bottom: 26px;
-            color: #292F36;
+            color: $colorTitle;
             font-family: DM Serif Display;
             font-size: 25px;
             font-style: normal;
@@ -391,7 +206,7 @@ body {
         }
         &_text {
             margin-bottom: 26px;
-            color: #4D5053;
+            color: $colorText;
             font-size: 22px;
             font-style: normal;
             font-weight: 400;
