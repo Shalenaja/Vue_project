@@ -4,6 +4,7 @@
 
 @import 'index';
 @import 'blog';
+@import 'blog-details';
 
 * {
     margin: 0;
@@ -122,8 +123,11 @@ body {
         }
 
         &_button {
-         border: 1px solid transparent;
-         background-color: $color_Back;
+            border-radius: 50px;
+            width: 52px;
+            height: 53px;
+            border: 1px solid transparent;
+            background-color: $color_Back;
         
             & svg:hover circle {
                 fill: $color_Back;

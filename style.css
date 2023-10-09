@@ -303,31 +303,179 @@
   gap: 20px;
 }
 .news-blog__scroll-page_button {
-  border: 1px solid transparent;
-  position: relative;
-  width: 52px;
   background-color: #FFF;
+  border-radius: 50px;
+  border: 1px solid #CDA274;
+  width: 52px;
+  height: 52px;
 }
-.news-blog__scroll-page_button1::after {
-  content: "1";
-  position: absolute;
-  top: 18px;
-  left: 23px;
-}
-.news-blog__scroll-page_button2::after {
-  content: "2";
-  position: absolute;
-  top: 18px;
-  left: 23px;
-}
-.news-blog__scroll-page_button3::after {
-  content: "3";
-  position: absolute;
-  top: 18px;
-  left: 23px;
+.news-blog__scroll-page_button:last-child {
+  border: 1px solid transparent;
 }
 .news-blog__scroll-page_button:hover svg {
   fill: #F4F0EC;
+}
+.news-blog__scroll-page_button:hover {
+  background-color: #F4F0EC;
+}
+
+.blog-details-banner {
+  margin-bottom: 200px;
+  background-image: url(img/Blog-details-banner.jpg);
+  height: 364px;
+  background-size: cover;
+}
+
+.blog-details-content {
+  margin-bottom: 96px;
+  display: flex;
+  flex-direction: row;
+  gap: 52px;
+}
+.blog-details-content__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 65.7%;
+}
+.blog-details-content__info_subtitle {
+  margin-bottom: 20px;
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.blog-details-content__info_img {
+  margin-bottom: 35px;
+}
+.blog-details-content__info_text {
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  display: block;
+  white-space: pre-wrap;
+  width: 800px;
+}
+.blog-details-content__info_text_list {
+  margin-top: 24px;
+  margin-bottom: 44px;
+}
+.blog-details-content__info_text_list li {
+  color: #4D5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  margin-bottom: 32px;
+}
+.blog-details-content__info_text_paragraph {
+  color: #CDA274;
+  font-family: DM Serif Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  margin-right: 14px;
+}
+.blog-details-content__info_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 11px;
+  margin-bottom: 48px;
+}
+.blog-details-content__info_data {
+  color: #4D5053;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+.blog-details-content__info_menu-details {
+  width: 250px;
+}
+.blog-details-content__info_menu-details ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  color: #4D5053;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+.blog-details-content__info_menu-details li {
+  position: relative;
+}
+.blog-details-content__info_menu-details li:not(:last-child)::after {
+  content: "/";
+  position: absolute;
+  left: 50px;
+}
+.blog-details-content__info_box-adt {
+  height: 267px;
+  width: 100%;
+  border-radius: 50px;
+  background: #F4F0EC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 35px;
+  margin-bottom: 27px;
+}
+.blog-details-content__info_box-adt_title {
+  width: 355px;
+  color: #CDA274;
+  text-align: center;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.blog-details-content__button-box {
+  height: 150px;
+  width: 31%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+.blog-details-content__button-box_title {
+  display: block;
+  width: 100%;
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.blog-details-content__button-box_button {
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: #F4F0EC;
+  color: #292F36;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+}
+.blog-details-content__button-box_button:hover {
+  background-color: #292F36;
+  color: #FFF;
 }
 
 * {
@@ -449,6 +597,9 @@ body {
   text-transform: capitalize;
 }
 .news-item__date_button {
+  border-radius: 50px;
+  width: 52px;
+  height: 53px;
   border: 1px solid transparent;
   background-color: #FFF;
 }
