@@ -70,6 +70,9 @@
             <section class="news-blog__cards">     
                 <div class="news-item" v-for="item in array" :key="id">  
                     <img class="news-item__img" :src="item.img" alt="news__block_img">
+                    <div class="news-item__kind">
+                        <h4 class="news-item__kind_heading">{{item.heading}}</h4>
+                    </div>
                     <h3 class="news-item__title">{{item.title}}</h3>
                     <div class="news-item__date">
                         <p class="news-item__date_left">{{item.data}}</p>
@@ -137,12 +140,12 @@
                 data() {
                     return {
                         array: [
-                            { id: '1', img: './img/news-item__img_1.jpg', title: 'Let’s Get Solution For Building Construction Work', data: '26 December,2022'},
-                            { id: '2', img: './img/news-item__img_2.jpg', title: 'Low Cost Latest Invented Interior Designing   Ideas.', data: '22 December,2022'},
-                            { id: '3', img: './img/news-item__img_3.jpg', title: 'Best For Any Office & Business Interior Solution', data: '25 December,2022'},
-                            { id: '1', img: './img/news-item__img_4.jpg', title: 'Let’s Get Solution For Building Construction Work', data: '26 December,2022'},
-                            { id: '2', img: './img/news-item__img_5.jpg', title: 'Low Cost Latest Invented Interior Designing   Ideas.', data: '22 December,2022'},
-                            { id: '3', img: './img/news-item__img_6.jpg', title: 'Best For Any Office & Business Interior Solution', data: '25 December,2022'},
+                            { id: '1', img: './img/news-item__img_1.jpg', heading: 'Kitchan Design', title: 'Let’s Get Solution For Building Construction Work', data: '26 December,2022'},
+                            { id: '2', img: './img/news-item__img_2.jpg', heading: 'Living Design', title: 'Low Cost Latest Invented Interior Designing   Ideas.', data: '22 December,2022'},
+                            { id: '3', img: './img/news-item__img_3.jpg', heading: 'Interior Design', title: 'Best For Any Office & Business Interior Solution', data: '25 December,2022'},
+                            { id: '1', img: './img/news-item__img_4.jpg', heading: 'Kitchan Design', title: 'Let’s Get Solution For Building Construction Work', data: '26 December,2022'},
+                            { id: '2', img: './img/news-item__img_5.jpg', heading: 'Living Design', title: 'Low Cost Latest Invented Interior Designing   Ideas.', data: '22 December,2022'},
+                            { id: '3', img: './img/news-item__img_6.jpg', heading: 'Interior Design', title: 'Best For Any Office & Business Interior Solution', data: '25 December,2022'},
                         ]
                     }
                 },

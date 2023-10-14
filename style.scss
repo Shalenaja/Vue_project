@@ -86,12 +86,36 @@ body {
     @include flex-col-start;
     border-radius: 82px;
     border: 1px solid #E7E7E7;
+    position: relative;
 
     &__img {
         height: 284px;
         margin-bottom: 12px;
         border-top-left-radius: 62px;
         border-top-right-radius: 62px;
+    }
+
+    &__kind {
+        position: absolute;
+        width: 124px;
+        height: 41px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background-color: $color_Back;       
+        top: 244px;
+        left: 42px;
+        text-align: center;
+
+        &_heading {
+            color: #4D5053;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.16px;
+            text-transform: capitalize;
+            margin-top: 6px;
+        }
     }
 
     &__title {
